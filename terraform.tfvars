@@ -1,0 +1,7 @@
+resource_group_name           = "rg_ai_foundry"
+location                      = "East US"
+sku_name                      = "S0"
+custom_subdomain_name         = "test_ai_foundry"
+foundry_name                  = "test_ai_f"
+project_management_enabled    = "true"
+public_network_access_enabled = "false"
