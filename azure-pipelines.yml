@@ -52,7 +52,7 @@ stages:
       inputs:
         provider: 'azurerm'
         command: 'plan'
-        coomandOptions: '-out $(Build.SourcesDirectory)/tfplanfile'
+        commandOptions: '-out $(Build.SourcesDirectory)/tfplanfile'
         environmentServiceNameAzureRM: 'prod_ready_ai_foundry'
 
     - task: ArchiveFiles@2
