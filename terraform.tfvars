@@ -7,3 +7,4 @@ ai_foundry_subnet_prefix     = ["10.0.2.0/24"]
 apim_subnet_name             = "sn-prod-apim-001"
 apim_subnet_prefix           = ["10.0.1.0/24"]
 foundry_storage_account_name = "saprodai"
+foundry_key_vault_name       = "kvprodai"

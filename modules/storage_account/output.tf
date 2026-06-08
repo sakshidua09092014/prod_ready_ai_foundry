@@ -1,0 +1,14 @@
+output "storage_account_name" {
+  value       = azurerm_storage_account.sa.name
+  description = "The name of the Storage Account."
+}
+
+output "storage_account_id" {
+  value       = azurerm_storage_account.sa.id
+  description = "The ID of the Storage Account for AI Foundry linkage."
+}
+
+output "primary_blob_endpoint" {
+  value       = azurerm_storage_account.sa.primary_blob_endpoint
+  description = "The primary blob endpoint URL."
+}

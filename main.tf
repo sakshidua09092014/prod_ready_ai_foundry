@@ -24,3 +24,12 @@ module "foundry_storage_account" {
   resource_group_name  = module.resource_group.resource_group_name
   location             = module.resource_group.resource_group_location
 }
+
+module "foundry_key_vault" {
+  source              = "./modules/key_vault"
+  key_vault_name      = "${var.foundry_key_vault_name}${substr(sha256(data.azurerm_client_config.current.subscription_id), 0, 6)}"
+  resource_group_name = module.resource_group.resource_group_name
+  location            = module.resource_group.resource_group_location
+  tenant_id           = data.azurerm_client_config.current.tenant_id
+  object_id           = data.azurerm_client_config.current.object_id
+}

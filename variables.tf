@@ -37,7 +37,11 @@ variable "apim_subnet_prefix" {
 }
 
 variable "foundry_storage_account_name" {
-    type = string
-    description = "storage account name"
+  type        = string
+  description = "storage account name"
 }
 
+variable "foundry_key_vault_name" {
+  type        = string
+  description = "foundry_key_vault_name"
+}
