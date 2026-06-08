@@ -1,3 +1,4 @@
+data "azurerm_client_config" "current" {}
 module "resource_group" {
   source              = "./modules/resource_group"
   resource_group_name = var.resource_group_name
@@ -15,4 +16,11 @@ module "vnet" {
   apim_subnet_name         = var.apim_subnet_name
   apim_subnet_prefix       = var.apim_subnet_prefix
 
+}
+
+module "foundry_storage_account" {
+  source               = "./modules/storage_account"
+  storage_account_name = "${var.foundry_storage_account_name}${substr(sha256(data.azurerm_client_config.current.subscription_id), 0, 6)}"
+  resource_group_name  = module.resource_group.resource_group_name
+  location             = module.resource_group.resource_group_location
 }

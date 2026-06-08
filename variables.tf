@@ -36,4 +36,8 @@ variable "apim_subnet_prefix" {
   description = "APIM Subnet Address space"
 }
 
+variable "foundry_storage_account_name" {
+    type = string
+    description = "storage account name"
+}
 
