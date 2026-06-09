@@ -1,6 +1,6 @@
 variable "storage_account_name" {
   type        = string
-  description = "Storage account ka global unique naam"
+  description = "Storage account name"
 }
 
 variable "resource_group_name" {
